@@ -1,4 +1,11 @@
 <template>
+    <div>
+        <nav>
+            <h1><router-link to="/">Reviews</router-link></h1>
+            <h1><router-link to="/artists">Artists</router-link></h1>
+            <h1><router-link to="/contributors">Contributors</router-link></h1>
+        </nav>
+    </div>
 </template>
 
 <script>
@@ -25,5 +32,5 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 </style>

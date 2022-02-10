@@ -1,9 +1,6 @@
 <template>
     <div>
-        FILTER
-    </div>
-    <div>
-        List of Coaches
+        Here is a list of all of our reviews
     </div>
 </template>
 

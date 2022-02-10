@@ -41,7 +41,7 @@ const router = createRouter({
             component: ContributorList
         },
         {
-            path: '/contributors/id',
+            path: '/contributors/:id',
             component: ContributorDetail,
             children: [
                 {
