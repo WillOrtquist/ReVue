@@ -4,22 +4,22 @@ import getters from './getters.js';
 
 export default {
     namespaced: true,
+    mutations,
+    actions,
+    getters,
     state() {
-        return{
+        return {
             reviews: [
                 {
                     id: 'bogusId',
                     title: 'bogus album name',
-                    genre: 'bogus genre',
+                    genre: 'hiphop',
                     artist: 'bogus artist',
                     artistId: 'bogus artist id',
                     body: 'bogus review body',
                     score: 'bogus review score'
-                }
+                },
             ]
-        },
-        mutations,
-        actions,
-        getters
+        }
     }
 };

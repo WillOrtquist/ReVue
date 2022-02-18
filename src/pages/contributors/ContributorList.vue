@@ -2,13 +2,18 @@
     <div>
         Here is a list of all of our Contributors
     </div>
+    <div>
+        <li v-for="contributor in filteredContributors" :key="contributor.id"> {{contributor.name}} </li>
+    </div>
+    <submit-review></submit-review>
 </template>
 
 <script>
-
+import SubmitReview from '../../components/contributors/SubmitReview.vue'
 export default {
     // name: 'module-enable-component',
     components: {
+        SubmitReview
     },
     data(){
         return{
@@ -20,6 +25,9 @@ export default {
     watch:{
     },
     computed: {
+        filteredContributors(){
+            return this.$store.getters['contributors/contributors']
+        }
     },
     methods: {
 

@@ -26,6 +26,7 @@ const router = createRouter({
             component: ReviewList },
         {
             path: '/reviews/:id',
+            props: true, // passes the :id into the component
             component: ReviewDetail
         },
         {
@@ -34,6 +35,7 @@ const router = createRouter({
         },
         {
             path: '/artists/:id',
+            props: true,
             component: ArtistDetail
         },
         {
@@ -42,6 +44,7 @@ const router = createRouter({
         },
         {
             path: '/contributors/:id',
+            props: true,
             component: ContributorDetail,
             children: [
                 {

@@ -7,15 +7,19 @@
 <script>
 
 export default {
-    // name: 'module-enable-component',
+    props: ['id'], // use this prop to fetch relevant data from store
     components: {
     },
     data(){
         return{
+            selectedReview: null
 
         }
     },
-    mounted(){
+    created() {
+        this.selectedReview = this.$store.getters['reviews/reviews'].find(
+            (review) => review.id === this.id
+        );
     },
     watch:{
     },
