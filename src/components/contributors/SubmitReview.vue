@@ -21,6 +21,7 @@ export default {
     methods: {
         saveData(data) { // gets form data from $emit
             this.$store.dispatch('reviews/addReview',data)
+            this.$router.replace('/reviews')
         }
     }
 }

@@ -17,7 +17,8 @@ export default {
                     artist: 'bogus artist',
                     artistId: 'bogus artist id',
                     body: 'bogus review body',
-                    score: 'bogus review score'
+                    score: 'bogus review score',
+                    contributorId: 'bogus contributor id'
                 },
             ]
         }

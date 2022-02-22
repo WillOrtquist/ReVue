@@ -9,6 +9,16 @@ const store = createStore({
         reviews: reviewsModule,
         artists: artistsModule,
         contributors: contributorsModule,
+    },
+    state() {
+        return {
+            userId: 'c3'
+        };
+    },
+    getters: {
+        userId(state) {
+            return state.userId;
+        }
     }
 });
 
