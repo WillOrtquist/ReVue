@@ -1,6 +1,5 @@
 <template>
-    <router-link :to="contributorDetailLink">{{ name }}</router-link>
-    <li>{{ id }}</li>
+    <base-button :to="contributorDetailLink">Message Contributor</base-button>
 </template>
 
 <script>
@@ -10,10 +9,12 @@ export default {
     // receives data through prop
     // this.$route.path == current path
     name: 'message-contributor',
+    props: ['id'],
     components: {
     },
     data(){
         return{
+
         }
     },
     mounted(){
@@ -21,6 +22,9 @@ export default {
     watch:{
     },
     computed: {
+        messageContributorLink() {
+            return `/contributors/${this.id}/message`
+        }
 
     },
     methods: {
