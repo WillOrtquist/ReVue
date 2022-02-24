@@ -30,13 +30,14 @@ export default {
     },
     methods: {
         showMessages() {
-            let msgs = this.$store.getters['messages/messsages']
-            console.log(msgs)
+            // let msgs = this.$store.getters['messages/messsages']
+            console.log(this.$store)
+            console.log(this.$store.getters)
         }
     },
     computed: {
         receivedMessages() {
-            return this.$store.getters['messages/messsages']
+            return this.$store.getters['messages/messages']
         },
         hasMessages() {
             return this.$store.getters['messages/hasMesssages']
