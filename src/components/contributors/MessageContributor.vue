@@ -1,5 +1,6 @@
 <template>
-    <base-button :to="contributorDetailLink">Message Contributor</base-button>
+    <base-button :link="true" :to="messageContributorLink">Message Contributor</base-button>
+    <!-- <base-button :to="messageContributorLink">Message Contributor</base-button> -->
 </template>
 
 <script>
@@ -23,6 +24,7 @@ export default {
     },
     computed: {
         messageContributorLink() {
+            console.log(`/contributors/${this.id}/message`)
             return `/contributors/${this.id}/message`
         }
 

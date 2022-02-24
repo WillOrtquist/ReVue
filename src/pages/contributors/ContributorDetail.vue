@@ -11,31 +11,22 @@
         <div>Bogus Content</div>
         <div>Bogus Content</div>
         <message-contributor :id="id"></message-contributor>
-        <div>
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" v-model.trim="email"/>
-        </div>
-        <div>
-            <label for="email">Message:</label>
-            <textarea rows="5" id="message" v-model.trim="message"/>
-        </div>
-        <p class="errors" v-if="!formIsValid">Please enter a valid email and non-empty message</p>
-        <div class="actions">
-            <base-button v-on:click="submitForm">Send Message</base-button>
-        </div>
+        <messages-received></messages-received>
     </div>
 </template>
 
 <script>
 
-import MessageContributor from '../../components/contributors/MessageContributor.vue'
+import MessageContributor from '../../components/contributors/MessageContributor.vue';
+import MessagesReceived from '../../pages/contributors/MessagesReceived.vue';
 
 export default {
     // name: 'module-enable-component',
     name: 'contributor-detail',
     props: ['id'],
     components: {
-        MessageContributor
+        MessageContributor,
+        MessagesReceived
     },
     data(){
         return{

@@ -1,26 +1,14 @@
 <template>
-    <section>
-        <base-card>
-            <header>
-                <h2>Messages Received:</h2>
-            </header>
-            <ul v-if="hasMessages">
-                <message-item v-for="msg in receivedMessages"
-                :key="msg.id"
-                :email="msg.userEmail"
-                :message="msg.message"
-                ></message-item>
-            </ul>
-            <h3 v-else>You haven't received any messages yet!</h3>
-        </base-card>
-    </section>
+    <base-button :link="true" :to="messageContributorLink">View Received Messages</base-button>
+    <!-- <base-button :to="messageContributorLink">Message Contributor</base-button> -->
 </template>
+>
 
 <script>
-import MessageItem from '../../components/messages/MessageItem.vue';
+// import MessageItem from '../messages/MessageItem.vue';
 export default {
     components: {
-        MessageItem
+        // MessageItem
     },
     data(){
         return{

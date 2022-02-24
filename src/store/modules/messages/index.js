@@ -2,14 +2,14 @@ import mutations from './mutations.js';
 import actions from './actions.js';
 import getters from './getters.js';
 
-export default{
+export default {
     namespaced: true,
+    mutations,
+    actions,
+    getters,
     state() {
         return {
             messages: []
         };
     },
-    mutations,
-    actions,
-    getters,
 };
