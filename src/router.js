@@ -52,7 +52,7 @@ const router = createRouter({
                     component: MessageContributor
                 },
                 {
-                    path: 'messagesRecieved',
+                    path: 'messagesReceived',
                     component: MessagesReceived
                 },
                 {

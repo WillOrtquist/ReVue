@@ -11,14 +11,17 @@
         <div>Bogus Content</div>
         <div>Bogus Content</div>
         <message-contributor :id="id"></message-contributor>
-        <messages-received></messages-received>
+        <messages-received-button :id="id"></messages-received-button>
     </div>
 </template>
 
 <script>
 
 import MessageContributor from '../../components/contributors/MessageContributor.vue';
-import MessagesReceived from '../../pages/contributors/MessagesReceived.vue';
+// import MessagesReceived from '../../pages/contributors/MessagesReceived.vue';
+import MessagesReceivedButton from '../../components/contributors/MessagesReceivedButton.vue';
+
+// the MessageContributor and MessagesReceivedButton should just be changed to buttons, don't need to import entire components
 
 export default {
     // name: 'module-enable-component',
@@ -26,7 +29,8 @@ export default {
     props: ['id'],
     components: {
         MessageContributor,
-        MessagesReceived
+        // MessagesReceived,
+        MessagesReceivedButton
     },
     data(){
         return{

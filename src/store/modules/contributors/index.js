@@ -13,6 +13,10 @@ export default {
                 {
                     id: 'bogusId',
                     name: 'Will Ortquist',
+                },
+                {
+                    id: 'otherBogusId',
+                    name: 'Oill Wortquist'
                 }
             ]
         }

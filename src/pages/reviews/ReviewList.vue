@@ -57,9 +57,15 @@ export default {
             return this.$store.getters['reviews/hasReviews']
         }
     },
+    created() {
+        this.loadReviews()
+    },
     methods: {
         setFilter(updatedFilters) { // argument is passed when even is emitted
             this.activeFilters = updatedFilters;
+        },
+        loadReviews() {
+            this.$store.dispatch('reviews/loadReviews');
         }
 
     }

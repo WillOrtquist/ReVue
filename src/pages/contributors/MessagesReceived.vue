@@ -12,7 +12,7 @@
                 ></message-item>
             </ul>
             <h3 v-else>You haven't received any messages yet!</h3>
-            <button v-on:click="showMessages">Show messages</button>
+            <button v-on:click="peek">look at state</button>
         </base-card>
     </section>
 </template>
@@ -29,18 +29,23 @@ export default {
         };
     },
     methods: {
-        showMessages() {
-            // let msgs = this.$store.getters['messages/messsages']
-            console.log(this.$store)
-            console.log(this.$store.getters)
+        peek() {
+            console.log('in peek funct')
+            let messages = this.$store.getters['messages/messages']
+            console.log(this.receivedMessages)
+            console.log(messages)
+
         }
     },
     computed: {
         receivedMessages() {
-            return this.$store.getters['messages/messages']
+            console.log(this.$store.getters)
+            let messages = this.$store.getters['messages/messages']
+            return messages
         },
         hasMessages() {
-            return this.$store.getters['messages/hasMesssages']
+            console.log(this.$store.getters)
+            return this.$store.getters['messages/hasMessages']
         }
     }
 }

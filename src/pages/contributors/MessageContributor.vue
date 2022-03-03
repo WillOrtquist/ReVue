@@ -43,12 +43,13 @@ export default {
                 this.formIsValid = false;
                 return;
             }
+            console.log(this.$route)
             this.$store.dispatch('messages/messageContributor', {
-                coachId: this.$route.id,
+                contributorId: this.$route.params.id,
                 email: this.email,
                 message: this.message
             });
-            this.$router.push(`/contributors/${this.$route.id}`)
+            this.$router.push(`/contributors/${this.$route.params.id}`)
         },
 
     }

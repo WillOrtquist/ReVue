@@ -24,7 +24,6 @@ export default {
     },
     computed: {
         messageContributorLink() {
-            console.log(`/contributors/${this.id}/message`)
             return `/contributors/${this.id}/message`
         }
 

@@ -34,6 +34,7 @@ export default {
     },
     computed: {
         filteredContributors() {
+            console.log(this.$store.getters['contributors/contributors'])
             return this.$store.getters['contributors/contributors']
         },
         isContributor() {
