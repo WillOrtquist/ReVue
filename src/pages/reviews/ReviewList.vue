@@ -1,28 +1,26 @@
 <template>
-    <div>
+    <h1>
         Here is a list of all of our reviews
-    </div>
-    <review-filter @change-filter="setFilter"></review-filter>
+    </h1>
+    <!-- <review-filter @change-filter="setFilter"></review-filter> -->
     <div>
         <!-- <li v-for="review in filteredReviews" :key="review.id"> {{review.title}}</li> -->
         <review-item
             v-for="review in filteredReviews"
             :key="review.id"
-            :title="review.title"
-            :artist="review.artist"
-            :genre="review.genre"
+            :review="review"
         ></review-item>
     </div>
 </template>
 
 <script>
 import ReviewItem from '../../components/reviews/ReviewItem.vue';
-import ReviewFilter from '../../components/reviews/ReviewFilter.vue';
+// import ReviewFilter from '../../components/reviews/ReviewFilter.vue';
 export default {
     // name: 'module-enable-component',
     components: {
         ReviewItem,
-        ReviewFilter
+        // ReviewFilter
     },
     data(){
         return{
@@ -75,5 +73,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+
 
 </style>

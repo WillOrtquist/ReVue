@@ -1,0 +1,9 @@
+TODO review website:
+
+Top Priority is get Delete review working. 
+Make register contributor button a component
+get ID stuff working. 
+
+Make review look nice, make review card
+
+https://codepen.io/HenrikFricke/pen/GRNYrXK

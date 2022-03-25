@@ -1,5 +1,6 @@
 export default {
     async addReview(context, payload) {
+        const reviewId = context.rootGetters.
         const reviewData = {
             id: 'bogusId',
             title: payload.title,
@@ -24,6 +25,9 @@ export default {
         }
 
         context.commit('addReview', reviewData);
+    },
+    aync deleteReview(context, payload) {
+
     },
     async loadReviews(context, ) {
         const response = await fetch(

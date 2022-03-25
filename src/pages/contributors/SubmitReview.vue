@@ -1,0 +1,27 @@
+<template>
+    <div>
+        <h2>Contributor, submit a review!</h2>
+        <review-form @save-data="saveData"></review-form>
+    </div>
+</template>
+
+<script>
+
+import ReviewForm from '../../components/contributors/ReviewForm.vue';
+export default {
+    components: {
+        ReviewForm
+    },
+    data(){
+        return{
+        };
+    },
+    methods: {
+        saveData(data) { // gets form data from $emit
+            this.$store.dispatch('reviews/addReview',data)
+            this.$router.replace('/reviews')
+        }
+    }
+}
+
+</script>

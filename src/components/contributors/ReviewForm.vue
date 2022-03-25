@@ -16,14 +16,14 @@
             <p v-if="!artist.isValid">Artist cannot be empty</p>
         </div>
         <div class="form-control">
-            <label :class="{invalid: !body.isValid}" for="body">Review Body</label>
-            <input id="body" type="text" v-model.trim="body.val" @blur="clearValidity('body')"/>
-            <p v-if="!body.isValid">Review Body cannot be empty</p>
-        </div>
-        <div class="form-control">
             <label :class="{invalid: !score.isValid}" for="score">Review Score</label>
             <input id="score" type="number" v-model.number="score.val" @blur="clearValidity('score')"/>
             <p v-if="!score.isValid">Review Score must be integer between 0 and 10</p>
+        </div>
+        <div class="form-control">
+            <label :class="{invalid: !body.isValid}" for="body">Review Body</label>
+            <textarea id="body" type="text" v-model.trim="body.val" @blur="clearValidity('body')"/>
+            <p v-if="!body.isValid">Review Body cannot be empty</p>
         </div>
         <div v-if="!formIsValid">Please fix errors and submit review again. </div>
         <base-button>Submit Review</base-button>
@@ -113,6 +113,54 @@ export default {
 .invalid{
     color: red;
 }
+
+form {
+  margin: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.form-control {
+  margin: 0.5rem 0;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font: inherit;
+  border: 1px solid #ccc;
+  padding: 0.15rem;
+}
+
+#body {
+    height:30rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3d008d;
+  background-color: #faf6ff;
+  outline: none;
+}
+
+.errors {
+  font-weight: bold;
+  color: red;
+}
+
+.actions {
+  text-align: center;
+}
+
+
 
 
 </style>

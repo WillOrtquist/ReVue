@@ -14,7 +14,6 @@ export default {
                     id: 'bogusId',
                     title: 'bogus album name',
                     genre: 'hiphop',
-                    artist: 'bogus artist',
                     artistId: 'bogus artist id',
                     body: 'bogus review body',
                     score: 'bogus review score',

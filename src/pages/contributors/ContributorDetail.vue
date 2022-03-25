@@ -12,6 +12,7 @@
         <div>Bogus Content</div>
         <message-contributor :id="id"></message-contributor>
         <messages-received-button :id="id"></messages-received-button>
+        <submit-review :id="id"></submit-review>
     </div>
 </template>
 
@@ -20,6 +21,7 @@
 import MessageContributor from '../../components/contributors/MessageContributor.vue';
 // import MessagesReceived from '../../pages/contributors/MessagesReceived.vue';
 import MessagesReceivedButton from '../../components/contributors/MessagesReceivedButton.vue';
+import SubmitReview from '../../components/contributors/SubmitReview.vue'
 
 // the MessageContributor and MessagesReceivedButton should just be changed to buttons, don't need to import entire components
 
@@ -29,7 +31,7 @@ export default {
     props: ['id'],
     components: {
         MessageContributor,
-        // MessagesReceived,
+        SubmitReview,
         MessagesReceivedButton
     },
     data(){

@@ -12,16 +12,15 @@
         </contributor-item>
 
     </div>
-    <submit-review></submit-review>
+    <base-button :link="true" :to="'/contributors/register'">Register Contributor</base-button>        <!-- should maybe be its own component -->
 </template>
 
 <script>
-import SubmitReview from '../../components/contributors/SubmitReview.vue'
 import ContributorItem from '../../components/contributors/ContributorItem.vue'
 export default {
     // name: 'module-enable-component',
     components: {
-        SubmitReview, ContributorItem
+        ContributorItem
     },
     data(){
         return{
@@ -54,6 +53,16 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
 
 </style>

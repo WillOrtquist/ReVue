@@ -10,8 +10,9 @@ import ContributorList from './pages/contributors/ContributorList.vue';
 import ContributorDetail from './pages/contributors/ContributorDetail.vue';
 import MessageContributor from './pages/contributors/MessageContributor.vue';
 import MessagesReceived from './pages/contributors/MessagesReceived.vue';
-import ContributorSubmit from './pages/contributors/MessagesReceived.vue';
+import ContributorSubmit from './pages/contributors/SubmitReview.vue';
 import ContributorLogin from './pages/contributors/MessagesReceived.vue';
+import ContributorRegistration from './pages/contributors/ContributorRegistration.vue';
 import NotFound from './pages/NotFound.vue';
 
 const router = createRouter({
@@ -43,6 +44,11 @@ const router = createRouter({
             component: ContributorList
         },
         {
+            path: '/contributors/register',
+            props: true,
+            component: ContributorRegistration
+        },
+        {
             path: '/contributors/:id',
             props: true,
             component: ContributorDetail,
@@ -59,11 +65,12 @@ const router = createRouter({
                     path: 'login',
                     component: ContributorLogin
                 },
-                {
-                    path: 'submit',
-                    component: ContributorSubmit
-                }
             ]
+        },
+        {
+            path: '/contributors/:id/submit',
+            props: true,
+            component: ContributorSubmit
         },
         {
             path: '/:notFound(.*)',

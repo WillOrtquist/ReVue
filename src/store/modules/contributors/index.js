@@ -9,14 +9,17 @@ export default {
     getters,
     state() {
         return{
+            // would probably add a permissions level
             contributors: [
                 {
                     id: 'bogusId',
                     name: 'Will Ortquist',
+                    permissions: 'moderator',
                 },
                 {
                     id: 'otherBogusId',
-                    name: 'Oill Wortquist'
+                    name: 'Oill Wortquist',
+                    permissions: 'contributor'
                 }
             ]
         }

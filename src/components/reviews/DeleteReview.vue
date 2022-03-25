@@ -1,20 +1,23 @@
 <template>
-    <base-button :link="true" :to="submitReviewLink">Submit Review</base-button>
+    <div>
+        <base-button v-on:click="deleteReview">Delete Review</base-button>
+    </div>
 </template>
 
 <script>
+import BaseButton from '../ui/BaseButton.vue'
 
 export default {
     // This should be a component for the individual reviews
     // receives data through prop
     // this.$route.path == current path
-    name: 'submit-review',
+    name: 'review-item',
     props: ['id'],
     components: {
+        BaseButton
     },
     data(){
         return{
-
         }
     },
     mounted(){
@@ -22,11 +25,14 @@ export default {
     watch:{
     },
     computed: {
-        submitReviewLink() {
-            return `/contributors/${this.id}/submit`
-        }
 
     },
+    methods: {
+        deleteReview() {
+            this.$store.dispatch('reviews/deleteReview',this.id)
+        }
+
+    }
 }
 
 </script>
